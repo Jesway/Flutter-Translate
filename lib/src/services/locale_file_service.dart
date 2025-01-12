@@ -44,13 +44,6 @@ class LocaleFileService
     {
         var file = _getFilepath(languageCode, basePath);
 
-        if(!localizedFiles.contains(file))
-        {
-            if(languageCode.contains('_'))
-            {
-                file = _getFilepath(languageCode.split('_').first, basePath);
-            }
-        }
 
         if(file == null)
         {
